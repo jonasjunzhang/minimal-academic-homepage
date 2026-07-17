@@ -115,6 +115,19 @@ src="./assets/profile.webp"
 
 只修改这几个值就可以完成大部分品牌定制。
 
+### 添加招聘或重点提示
+
+需要在个人简介后突出招聘、合作等信息时，可以使用模板内置的提示区块：
+
+```html
+<p class="hiring-note">
+  <span class="hiring-note-label">Open positions</span>
+  Add a concise hiring or collaboration message here.
+</p>
+```
+
+不需要提示时，直接删除整个 `hiring-note` 段落即可。
+
 ## 添加 News
 
 按照已有项目复制并修改：
@@ -135,7 +148,8 @@ src="./assets/profile.webp"
 - `experience-logo`：默认显示机构缩写，也可以替换为本地 Logo 图片。
 - `experience-period`：开始和结束时间；当前职位可使用 `Present`。
 - `experience-location`：城市、国家或 `Remote`。
-- `<h3>`：职位和机构名称，机构可添加官网链接。
+- `<h3>`：任职性质、团队和机构名称，机构可添加官网链接；可使用
+  `Full-time · Research Team at Your Institution` 这样的紧凑格式。
 - 最后一个 `<p>`：用一到两句话描述主要工作。
 
 示例：
@@ -152,7 +166,10 @@ src="./assets/profile.webp"
     <p class="experience-location">Your City</p>
   </div>
   <div class="experience-body">
-    <h3>Research Scientist <span>at <a href="#">Your Institution</a></span></h3>
+    <h3>
+      Full-time · Research Team
+      <span>at <a href="#">Your Institution</a></span>
+    </h3>
     <p>A concise description of your work and research focus.</p>
   </div>
 </article>
