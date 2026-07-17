@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title desc">
+  <title id="title">Profile photo placeholder</title>
+  <desc id="desc">Abstract warm gray portrait placeholder with the initials YN.</desc>
+  <rect width="640" height="800" fill="#eeece5"/>
+  <circle cx="505" cy="126" r="54" fill="#e44f2a"/>
+  <path d="M0 670 210 460l108 112 92-85 230 220v93H0Z" fill="#d8d5cc"/>
+  <circle cx="320" cy="310" r="112" fill="#c8c4b8"/>
+  <path d="M128 720c13-183 85-285 192-285s179 102 192 285Z" fill="#b5b0a4"/>
+  <text x="54" y="96" fill="#171714" font-family="Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-2">YN</text>
+</svg>

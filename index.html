@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A minimal academic homepage for researchers and students."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Your Name · Academic Homepage</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Back to top">YN<span>.</span></a>
+      <nav>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============================================================
+        PERSONAL INFO START
+        Replace the sample name, introduction, links, and portrait below.
+        See README.md for a complete editing guide.
+      ============================================================= -->
+      <section class="hero" id="top" aria-labelledby="profile-name">
+        <div class="hero-copy">
+          <h1 id="profile-name">
+            Your <em>Name</em> <span class="name-native">(中文名)</span>
+          </h1>
+
+          <div class="bio">
+            <p>
+              I am a researcher at <a href="#">Your Institution</a>, working on
+              <strong>machine learning</strong>, <strong>computer vision</strong>,
+              and reliable AI systems.
+            </p>
+            <p>
+              I received my Ph.D. from <a href="#">University Name</a>, where I
+              was advised by <a href="#">Professor Name</a>. I enjoy building
+              simple methods that answer important questions.
+            </p>
+          </div>
+
+          <div class="profile-links" aria-label="Profile links">
+            <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">
+              Google Scholar <span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+            <a href="mailto:you@example.com">
+              Email <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="portrait">
+          <img
+            src="./assets/profile-placeholder.svg"
+            alt="Portrait of Your Name"
+            width="640"
+            height="800"
+            fetchpriority="high"
+          />
+        </figure>
+      </section>
+      <!-- PERSONAL INFO END -->
+
+      <!-- NEWS START: copy one .news-item block to add an update. -->
+      <section class="section" id="news" aria-labelledby="news-title">
+        <div class="section-heading">
+          <h2 id="news-title">News</h2>
+        </div>
+
+        <div class="news-list">
+          <article class="news-item">
+            <time datetime="2026-05">May 2026</time>
+            <p>
+              Our new work on <a href="#">trustworthy multimodal learning</a>
+              has been accepted to CVPR 2026.
+            </p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-02">Feb 2026</time>
+            <p>
+              I joined <a href="#">Your Institution</a> as a research scientist.
+            </p>
+          </article>
+          <article class="news-item">
+            <time datetime="2025-11">Nov 2025</time>
+            <p>
+              We released the code and models for <a href="#">Project Atlas</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- NEWS END -->
+
+      <!-- PUBLICATIONS START: copy one .publication block to add a paper. -->
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <div class="section-heading">
+          <h2 id="publications-title">Publications</h2>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication">
+            <div class="publication-body">
+              <p class="venue">CVPR <span>2026</span></p>
+              <h3>Learning Robust Visual Representations from Imperfect Data</h3>
+              <p class="authors">
+                <strong>Your Name</strong>, Collaborator One, Collaborator Two,
+                and Advisor Name
+              </p>
+              <div class="paper-links" aria-label="Publication links">
+                <a href="#">Paper</a>
+                <a href="#">Code</a>
+                <a href="#">Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-body">
+              <p class="venue">NeurIPS <span>2025</span></p>
+              <h3>A Simple Framework for Reliable Multimodal Reasoning</h3>
+              <p class="authors">
+                Collaborator One, <strong>Your Name</strong>, Collaborator Two,
+                and Advisor Name
+              </p>
+              <div class="paper-links" aria-label="Publication links">
+                <a href="#">Paper</a>
+                <a href="#">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-body">
+              <p class="venue">arXiv <span>2025</span></p>
+              <h3>Understanding When Vision–Language Models Generalize</h3>
+              <p class="authors">
+                <strong>Your Name</strong>, Collaborator One, and Collaborator Two
+              </p>
+              <div class="paper-links" aria-label="Publication links">
+                <a href="#">Paper</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- PUBLICATIONS END -->
+
+      <!-- EXPERIENCE START: copy one .experience-item block to add a role. -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <h2 id="experience-title">Experience</h2>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <!-- Replace the initials with a local <img>; see README. -->
+            <div class="experience-logo" aria-hidden="true">
+              <span>YI</span>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-period">
+                <time datetime="2024-09">Sep 2024</time> — Present
+              </p>
+              <p class="experience-location">Your City</p>
+            </div>
+            <div class="experience-body">
+              <h3>
+                Research Scientist <span>at <a href="#">Your Institution</a></span>
+              </h3>
+              <p>
+                Working on reliable multimodal learning and building practical
+                systems that connect research ideas with real-world applications.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-logo" aria-hidden="true">
+              <span>AI</span>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-period">
+                <time datetime="2023-05">May 2023</time> —
+                <time datetime="2023-08">Aug 2023</time>
+              </p>
+              <p class="experience-location">Remote</p>
+            </div>
+            <div class="experience-body">
+              <h3>
+                Research Intern <span>at <a href="#">AI Research Lab</a></span>
+              </h3>
+              <p>
+                Studied efficient adaptation methods for vision–language models
+                and collaborated with a small team on open-source research.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-logo" aria-hidden="true">
+              <span>UN</span>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-period">
+                <time datetime="2020-09">Sep 2020</time> —
+                <time datetime="2024-06">Jun 2024</time>
+              </p>
+              <p class="experience-location">University City</p>
+            </div>
+            <div class="experience-body">
+              <h3>
+                Graduate Researcher <span>at <a href="#">University Name</a></span>
+              </h3>
+              <p>
+                Conducted doctoral research in computer vision and machine
+                learning under the supervision of Professor Name.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- EXPERIENCE END -->
+    </main>
+
+    <footer>
+      <p>© 2026 Your Name</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
