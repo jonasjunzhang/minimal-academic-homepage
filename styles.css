@@ -154,6 +154,16 @@ h1 em {
   text-decoration-color: var(--line);
 }
 
+.hiring-note {
+  max-width: 680px;
+  margin: 1.25rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--soft);
+  font-size: 0.96rem;
+  font-weight: 620;
+}
+
 .profile-links {
   display: flex;
   flex-wrap: wrap;
