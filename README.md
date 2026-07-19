@@ -1,6 +1,6 @@
 # Minimal Academic Homepage
 
-一个内容优先、加载迅速、易于维护的极简学术主页模板。页面由原生 HTML、CSS 和本地图片组成，适合直接部署到 GitHub Pages，也适合网络条件较差的访问者。
+一个内容优先、加载迅速、易于维护且对搜索引擎友好的极简学术主页模板（academic homepage template / researcher portfolio）。页面由原生 HTML、CSS 和本地图片组成，适合直接部署到 GitHub Pages，也适合网络条件较差的访问者。
 
 ## 开发原则
 
@@ -17,6 +17,7 @@ Contributor 添加功能时，应优先使用原生 HTML 和 CSS，只有在明�
 
 - 个人简介、照片，以及 Google Scholar、GitHub 和邮箱链接。
 - News、Publications、Experience；Experience 支持本地机构 Logo。
+- 内置 canonical、Open Graph、Twitter Card、`ProfilePage` / `Person` / `ScholarlyArticle` JSON-LD、`robots.txt` 和 XML sitemap。
 - 白色背景的响应式单页设计，兼顾桌面端信息密度和手机端阅读体验。
 - 零运行时依赖、零构建步骤，克隆后即可本地预览。
 - 适用于个人域名、`username.github.io` 和 GitHub Pages 项目子路径。
@@ -26,7 +27,9 @@ Contributor 添加功能时，应优先使用原生 HTML 和 CSS，只有在明�
 ```text
 .
 ├── index.html                    # 所有页面内容
-├── styles.css                   # 视觉样式与响应式规则
+├── robots.txt                    # 搜索引擎抓取与 sitemap 地址
+├── sitemap.xml                   # 站点地图；部署前替换正式域名
+├── styles.css                    # 视觉样式与响应式规则
 ├── assets/
 │   ├── profile-placeholder.svg   # 示例头像，请替换
 │   └── logo-*.webp               # 可选的机构 Logo
@@ -78,6 +81,59 @@ py -m http.server 8000
 | 工作或学术经历 | `EXPERIENCE START` | 复制一个 `<article class="experience-item">` |
 | 论文 | `PUBLICATIONS START` | 复制一个 `<article class="publication">` |
 | 页脚 | `<footer>` | 更新年份和姓名 |
+
+## SEO 配置（部署前必须完成）
+
+模板已经提供完整的 SEO 骨架，但搜索引擎只能理解真实、与页面可见内容一致的信息。部署前请在整个项目中搜索 `YOUR_`、`YOUR-DOMAIN.example`、`Your Name`、`中文名`、`Your Institution` 和示例论文标题，逐项替换。
+
+### 1. 页面标题与搜索摘要
+
+在 `index.html` 的 `<head>` 中更新：
+
+- `<title>`：建议使用“姓名（中文名）| 研究方向 + Researcher”，并确保姓名与页面唯一的 `<h1>` 一致。
+- `meta description`：用自然语言概括当前职位、核心研究方向和代表作；不要堆砌关键词。
+- `meta author`：填写公开姓名。
+- `link rel="canonical"`：填写唯一的 HTTPS 正式主页地址，并保留结尾 `/`。
+
+### 2. 社交分享信息
+
+同步更新所有 `og:*` 和 `twitter:*` 字段。若有合适的公开图片，建议准备一张高质量社交分享图，并加入：
+
+```html
+<meta property="og:image" content="https://YOUR-DOMAIN.example/assets/og-image.jpg" />
+<meta property="og:image:alt" content="Your Name — academic homepage" />
+<meta name="twitter:image" content="https://YOUR-DOMAIN.example/assets/og-image.jpg" />
+```
+
+不要引用无法公开抓取的图片，也不要使用与本人无关的通用占位图。
+
+### 3. 结构化数据
+
+`index.html` 内的 `application/ld+json` 使用一个 `@graph` 关联以下实体：
+
+- `WebSite`：帮助搜索引擎识别站点名称。
+- `ProfilePage`：声明主页的核心实体是本人。
+- `Person`：关联姓名、中文名、头像、职位、机构、学校、研究方向以及 Google Scholar / GitHub 等公开身份。
+- `ScholarlyArticle`：将页面中的论文标题、年份和链接与本人关联。
+
+每新增一篇论文，除了更新页面可见的 Publications 区块，也应复制一个 `ScholarlyArticle` 节点，并把它的 `@id` 加入 `ProfilePage.hasPart`。结构化数据必须与页面可见内容一致，不要加入未公开或无法验证的信息。
+
+### 4. robots 与 sitemap
+
+同时把正式域名写入：
+
+- `robots.txt` 的 `Sitemap` 地址。
+- `sitemap.xml` 的 `<loc>`。
+
+如果主页 URL 或部署路径变化，这三处（canonical、robots、sitemap）必须一起更新。发布后可在 Google Search Console 和 Bing Webmaster Tools 提交 sitemap，并请求重新抓取主页。
+
+### 5. 上线前检查
+
+1. 确认生产地址无需登录、返回 HTTP 200，且没有 `noindex`。
+2. 使用 Schema.org Validator 检查 JSON-LD 语法，并用 Google Rich Results Test 检查 Google 支持的结构化数据。
+3. 搜索整个项目，确保没有遗留 `YOUR_` 或 `.example` 占位值。
+4. 确保论文标题、机构全名、姓名变体和研究方向在页面可见正文中自然出现。
+5. 在 Search Console 提交 sitemap。抓取、处理和排名需要时间；正确的 SEO 配置不能保证立即或固定排名。
 
 ### 替换照片
 

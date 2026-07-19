@@ -5,11 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A minimal academic homepage for researchers and students."
+      content="Your Name (中文名) is a researcher working on machine learning, computer vision, and reliable AI. Explore publications, research experience, news, and contact information."
+    />
+    <meta name="author" content="Your Name" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="theme-color" content="#ffffff" />
-    <title>Your Name · Academic Homepage</title>
+    <title>Your Name (中文名) | Machine Learning &amp; Computer Vision Researcher</title>
     <link rel="icon" href="data:," />
+    <link rel="canonical" href="https://YOUR-DOMAIN.example/" />
+    <link rel="sitemap" type="application/xml" href="./sitemap.xml" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Your Name (中文名) | Academic Homepage" />
+    <meta
+      property="og:description"
+      content="Researcher in machine learning, computer vision, and reliable AI. Explore publications, experience, news, and contact information."
+    />
+    <meta property="og:url" content="https://YOUR-DOMAIN.example/" />
+    <meta property="og:site_name" content="Your Name" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Your Name (中文名) | Academic Homepage" />
+    <meta
+      name="twitter:description"
+      content="Researcher in machine learning, computer vision, and reliable AI."
+    />
+
+    <!--
+      SEO SETUP: replace every YOUR-DOMAIN, name, institution, profile, image,
+      research topic, and publication value below. See README.md for the checklist.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://YOUR-DOMAIN.example/#website",
+            "url": "https://YOUR-DOMAIN.example/",
+            "name": "Your Name",
+            "alternateName": ["中文名", "Your Name Academic Homepage"],
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://YOUR-DOMAIN.example/#profile-page",
+            "url": "https://YOUR-DOMAIN.example/",
+            "name": "Your Name (中文名) — Academic Homepage",
+            "description": "Research profile, publications, experience, and news for Your Name.",
+            "isPartOf": { "@id": "https://YOUR-DOMAIN.example/#website" },
+            "mainEntity": { "@id": "https://YOUR-DOMAIN.example/#person" },
+            "hasPart": [
+              { "@id": "https://YOUR-DOMAIN.example/#publication-robust-visual-representations" }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://YOUR-DOMAIN.example/#person",
+            "name": "Your Name",
+            "alternateName": "中文名",
+            "url": "https://YOUR-DOMAIN.example/",
+            "image": "https://YOUR-DOMAIN.example/assets/profile.webp",
+            "jobTitle": "Researcher",
+            "description": "Researcher working on machine learning, computer vision, and reliable AI.",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Your Institution",
+              "url": "https://institution.example/"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "University Name",
+              "url": "https://university.example/"
+            },
+            "knowsAbout": [
+              "Machine Learning",
+              "Computer Vision",
+              "Reliable Artificial Intelligence"
+            ],
+            "sameAs": [
+              "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID",
+              "https://github.com/YOUR_GITHUB_USERNAME"
+            ]
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://YOUR-DOMAIN.example/#publication-robust-visual-representations",
+            "headline": "Learning Robust Visual Representations from Imperfect Data",
+            "datePublished": "2026",
+            "url": "https://doi.org/10.0000/replace-with-your-paper",
+            "author": { "@id": "https://YOUR-DOMAIN.example/#person" },
+            "about": ["Machine Learning", "Computer Vision"]
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -117,7 +210,7 @@
         </div>
 
         <div class="publication-list">
-          <article class="publication">
+          <article class="publication" id="publication-robust-visual-representations">
             <div class="publication-body">
               <p class="venue">CVPR <span>2026</span></p>
               <h3>Learning Robust Visual Representations from Imperfect Data</h3>
