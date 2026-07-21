@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Jun Zhang (张峻) is a multimodal LLM and video AI researcher at JoyAI, author of VideoChat3, TimeLens, p-MoD, and VideoCap-R1, and a former intern at StepFun and Tencent ARC Lab."
+      content="Jun Zhang (张峻) is a multimodal LLM and video AI researcher at JoyAI, author of TimeLens2, VideoChat3, TimeLens, p-MoD, and VideoCap-R1, and a former intern at StepFun and Tencent ARC Lab."
     />
     <meta name="author" content="Jun Zhang (张峻)" />
     <meta
@@ -13,16 +13,16 @@
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="theme-color" content="#ffffff" />
-    <title>Jun Zhang (张峻) | Multimodal LLM &amp; Video AI Researcher</title>
+    <title>Jun Zhang (张峻)</title>
     <link rel="icon" href="data:," />
     <link rel="canonical" href="https://home.j-zh.top/" />
     <link rel="sitemap" type="application/xml" href="./sitemap.xml" />
 
     <meta property="og:type" content="profile" />
-    <meta property="og:title" content="Jun Zhang (张峻) | Multimodal LLM &amp; Video AI Researcher" />
+    <meta property="og:title" content="Jun Zhang (张峻)" />
     <meta
       property="og:description"
-      content="Researcher at JoyAI working on multimodal LLMs, video understanding, and post-training; author of VideoChat3, TimeLens, p-MoD, and VideoCap-R1."
+      content="Researcher at JoyAI working on multimodal LLMs, video understanding, and post-training; author of TimeLens2, VideoChat3, TimeLens, p-MoD, and VideoCap-R1."
     />
     <meta property="og:url" content="https://home.j-zh.top/" />
     <meta property="og:site_name" content="Jun Zhang" />
@@ -35,10 +35,10 @@
     <meta property="profile:last_name" content="Zhang" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Jun Zhang (张峻) | Multimodal LLM &amp; Video AI Researcher" />
+    <meta name="twitter:title" content="Jun Zhang (张峻)" />
     <meta
       name="twitter:description"
-      content="Researcher at JoyAI; author of VideoChat3, TimeLens, p-MoD, and VideoCap-R1."
+      content="Researcher at JoyAI; author of TimeLens2, VideoChat3, TimeLens, p-MoD, and VideoCap-R1."
     />
     <meta name="twitter:image" content="https://home.j-zh.top/assets/profile.jpg" />
     <meta name="twitter:image:alt" content="Portrait of Jun Zhang (张峻)" />
@@ -51,7 +51,7 @@
             "@type": "WebSite",
             "@id": "https://home.j-zh.top/#website",
             "url": "https://home.j-zh.top/",
-            "name": "Jun Zhang",
+            "name": "Jun Zhang (张峻)",
             "alternateName": ["张峻", "Jun Zhang Academic Homepage", "home.j-zh.top"],
             "inLanguage": "en"
           },
@@ -59,13 +59,14 @@
             "@type": "ProfilePage",
             "@id": "https://home.j-zh.top/#profile-page",
             "url": "https://home.j-zh.top/",
-            "name": "Jun Zhang (张峻) — Multimodal LLM and Video AI Researcher",
+            "name": "Jun Zhang (张峻)",
             "description": "Academic profile, publications, research experience, and news for Jun Zhang (张峻).",
-            "dateModified": "2026-07-19",
+            "dateModified": "2026-07-21",
             "isPartOf": { "@id": "https://home.j-zh.top/#website" },
             "mainEntity": { "@id": "https://home.j-zh.top/#person" },
             "primaryImageOfPage": { "@id": "https://home.j-zh.top/#profile-image" },
             "hasPart": [
+              { "@id": "https://home.j-zh.top/#publication-timelens2" },
               { "@id": "https://home.j-zh.top/#publication-videochat3" },
               { "@id": "https://home.j-zh.top/#publication-step-3-7-flash" },
               { "@id": "https://home.j-zh.top/#publication-timelens" },
@@ -146,6 +147,19 @@
             "@id": "https://home.j-zh.top/#organization-tencent-arc",
             "name": "Tencent ARC Lab",
             "url": "https://arc.tencent.com/en/index"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://home.j-zh.top/#publication-timelens2",
+            "headline": "TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs",
+            "datePublished": "2026-07-19",
+            "url": "https://arxiv.org/abs/2607.17423",
+            "author": { "@id": "https://home.j-zh.top/#person" },
+            "sameAs": [
+              "https://mcg-nju.github.io/TimeLens2/",
+              "https://github.com/MCG-NJU/TimeLens2"
+            ],
+            "about": ["Video Temporal Grounding", "Multimodal Large Language Models"]
           },
           {
             "@type": "ScholarlyArticle",
@@ -238,9 +252,9 @@
               <a href="https://research.joyai.com/" target="_blank" rel="noreferrer">JoyAI, Joy Future Academy (京东探索研究院)</a>
               through the
               <strong>TGT (Tech Genius Team) Program</strong>, working with
-              <a href="https://phoebussi.github.io/" target="_blank" rel="noreferrer">Qingyi Si</a>
-              and
-              <a href="https://myownskyw7.github.io/" target="_blank" rel="noreferrer">Jiaqi Wang</a>.
+              <a href="https://phoebussi.github.io/" target="_blank" rel="noreferrer">Qingyi Si</a>,
+              <a href="https://myownskyw7.github.io/" target="_blank" rel="noreferrer">Jiaqi Wang</a>, and
+              <a href="https://nanduan.github.io/" target="_blank" rel="noreferrer">Nan Duan</a>.
             </p>
             <p>I am currently part of the LLM Foundation Model Team, focusing on:</p>
             <ul>
@@ -308,6 +322,14 @@
 
         <div class="news-list">
           <article class="news-item">
+            <time datetime="2026-07-19">Jul 19, 2026</time>
+            <p>
+              We introduce
+              <a href="https://github.com/MCG-NJU/TimeLens2" target="_blank" rel="noreferrer">TimeLens2</a>,
+              a next-generation model family and training corpus for generalist video temporal grounding.
+            </p>
+          </article>
+          <article class="news-item">
             <time datetime="2026-07-16">Jul 16, 2026</time>
             <p>
               Our new paper
@@ -360,6 +382,22 @@
         </div>
 
         <div class="publication-list">
+          <article class="publication" id="publication-timelens2">
+            <div class="publication-body">
+              <p class="venue">arXiv <span>2026</span></p>
+              <h3>TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs</h3>
+              <p class="authors">
+                Yuhan Zhu, Changlian Ma, Xiangyu Zeng, Xinhao Li, Zhiqiu Zhang,
+                …, <strong>Jun Zhang</strong>, …, Shaowei Zhang, and Limin Wang
+              </p>
+              <div class="paper-links" aria-label="Publication links">
+                <a href="https://mcg-nju.github.io/TimeLens2/" target="_blank" rel="noreferrer">Homepage</a>
+                <a href="https://arxiv.org/abs/2607.17423" target="_blank" rel="noreferrer">Paper</a>
+                <a href="https://github.com/MCG-NJU/TimeLens2" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
           <article class="publication" id="publication-videochat3">
             <div class="publication-body">
               <p class="venue">arXiv <span>2026</span></p>
@@ -370,10 +408,10 @@
                 Kai Chen, and Limin Wang
               </p>
               <div class="paper-links" aria-label="Publication links">
-                <a href="https://arxiv.org/abs/2607.14935" target="_blank" rel="noreferrer">Paper</a>
                 <a href="https://mcg-nju.github.io/VideoChat3" target="_blank" rel="noreferrer">Homepage</a>
-                <a href="https://huggingface.co/collections/MCG-NJU/videochat3" target="_blank" rel="noreferrer">Model &amp; Data</a>
+                <a href="https://arxiv.org/abs/2607.14935" target="_blank" rel="noreferrer">Paper</a>
                 <a href="https://github.com/MCG-NJU/VideoChat3" target="_blank" rel="noreferrer">Code</a>
+                <a href="https://huggingface.co/collections/MCG-NJU/videochat3" target="_blank" rel="noreferrer">Model &amp; Data</a>
               </div>
             </div>
           </article>
@@ -399,9 +437,9 @@
                 Xinhao Li, Ying Shan, and Limin Wang
               </p>
               <div class="paper-links" aria-label="Publication links">
+                <a href="https://timelens-arc-lab.github.io/" target="_blank" rel="noreferrer">Homepage</a>
                 <a href="https://arxiv.org/abs/2512.14698" target="_blank" rel="noreferrer">Paper</a>
                 <a href="https://github.com/TencentARC/TimeLens" target="_blank" rel="noreferrer">Code</a>
-                <a href="https://timelens-arc-lab.github.io/" target="_blank" rel="noreferrer">Project</a>
               </div>
             </div>
           </article>
@@ -467,9 +505,9 @@
               </h3>
               <p>
                 Working on multimodal large language models and video understanding with
-                <a href="https://phoebussi.github.io/" target="_blank" rel="noreferrer">Qingyi Si</a>
-                and
-                <a href="https://myownskyw7.github.io/" target="_blank" rel="noreferrer">Jiaqi Wang</a>.
+                <a href="https://phoebussi.github.io/" target="_blank" rel="noreferrer">Qingyi Si</a>,
+                <a href="https://myownskyw7.github.io/" target="_blank" rel="noreferrer">Jiaqi Wang</a>, and
+                <a href="https://nanduan.github.io/" target="_blank" rel="noreferrer">Nan Duan</a>.
               </p>
             </div>
           </article>

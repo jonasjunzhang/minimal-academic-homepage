@@ -8,7 +8,7 @@
 
 - 填写个人简介、研究方向、联系方式、News、Publications 和 Experience。
 - 使用个人头像，以及 Joy Future Academy、StepFun 和 Tencent ARC Lab 的机构 Logo。
-- 为 VideoChat3、TimeLens、p-MoD、VideoCap-R1 和 Step 3.7 Flash 配置论文、代码、项目、模型与数据链接。
+- 为 TimeLens2、VideoChat3、TimeLens、p-MoD、VideoCap-R1 和 Step 3.7 Flash 配置论文、代码、项目、模型与数据链接。
 - 将 SEO 占位内容替换为真实域名、姓名、研究方向、论文和机构信息，并使用 JSON-LD 建立实体关联。
 - 配置 `CNAME`、`robots.txt`、包含头像信息的 `sitemap.xml`，以及仅在正式域名加载的 Statcounter。
 
